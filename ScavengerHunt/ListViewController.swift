@@ -32,7 +32,15 @@ class ListViewController : UITableViewController {
     
     
     @IBAction func unwindToList(segue: UIStoryboardSegue) {
-        
+        if (segue.identifier == "DoneItem") {
+            
+            let addItemController = segue.sourceViewController as ViewController
+            if let newItem = addItemController.itemName {
+                itemsList += [newItem]
+                let indexPath =  NSIndexPath(forRow: itemsList.count - 1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
         
     }
     

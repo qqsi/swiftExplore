@@ -40,10 +40,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="1Ln-aO-KuY">
                             <connections>
-                                <segue destination="pyE-OP-7Sl" kind="unwind" unwindAction="unwindToList:" id="UOh-Bq-4LZ"/>
+                                <segue destination="pyE-OP-7Sl" kind="unwind" identifier="DoneItem" unwindAction="unwindToList:" id="yeK-up-67k"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="ZIl-U7-ft2" id="btk-j5-kbF"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2708" y="1107"/>
