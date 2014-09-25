@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3208379319D471A700C81201 /* ItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208379219D471A700C81201 /* ItemsManager.swift */; };
 		32BA5A6C19D371CF00B4D2AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BA5A6B19D371CF00B4D2AE /* AppDelegate.swift */; };
 		32BA5A6E19D371CF00B4D2AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BA5A6D19D371CF00B4D2AE /* ViewController.swift */; };
 		32BA5A7119D371CF00B4D2AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BA5A6F19D371CF00B4D2AE /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3208379219D471A700C81201 /* ItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsManager.swift; sourceTree = "<group>"; };
 		32BA5A6619D371CF00B4D2AE /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BA5A6A19D371CF00B4D2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32BA5A6B19D371CF00B4D2AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		32BA5A6819D371CF00B4D2AE /* ScavengerHunt */ = {
 			isa = PBXGroup;
 			children = (
+				3208379219D471A700C81201 /* ItemsManager.swift */,
 				32BA5A6B19D371CF00B4D2AE /* AppDelegate.swift */,
 				32BA5A6D19D371CF00B4D2AE /* ViewController.swift */,
 				32BA5A8D19D39E5B00B4D2AE /* ScavengerHuntItem.swift */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3208379319D471A700C81201 /* ItemsManager.swift in Sources */,
 				32BA5A6E19D371CF00B4D2AE /* ViewController.swift in Sources */,
 				32BA5A6C19D371CF00B4D2AE /* AppDelegate.swift in Sources */,
 				32BA5A8E19D39E5B00B4D2AE /* ScavengerHuntItem.swift in Sources */,
@@ -415,6 +419,7 @@
 				32BA5A8719D371CF00B4D2AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32BA5A8819D371CF00B4D2AE /* Build configuration list for PBXNativeTarget "ScavengerHuntTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				32BA5A8A19D371CF00B4D2AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ScavengerHuntItem: NSObject {
+class ScavengerHuntItem: NSObject, NSCoding {
+    
+    private struct SerializationKeys {
+        static let name = "name"
+        static let photo = "photo"
+    }
+    
     let name: String
     var photo: UIImage?
     var isComplete: Bool {
@@ -21,5 +27,18 @@ class ScavengerHuntItem: NSObject {
         self.name = name
     }
     
+    required init(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObjectForKey(SerializationKeys.name) as String
+        photo = aDecoder.decodeObjectForKey(SerializationKeys.photo) as? UIImage
+    }
+    
 
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: SerializationKeys.name)
+        if let thePhoto = photo {
+            aCoder.encodeObject(thePhoto, forKey: SerializationKeys.photo)
+        }
+    }
+    
+    
 }
