@@ -10,7 +10,7 @@ import UIKit
 
 class ListViewController : UITableViewController {
     
-    var itemsList = ["Cat", "Bird", "Brick"]
+    var itemsList = [ScavengerHuntItem]()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemsList.count
@@ -19,7 +19,9 @@ class ListViewController : UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
             let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell") as UITableViewCell
-            cell.textLabel!.text = itemsList[indexPath.row]
+        
+            let item = itemsList[indexPath.row]
+            cell.textLabel!.text = itemsList[indexPath.row].name
 //        
 //            if let theLabel = cell.textLabel {
 //                theLabel.text = itemsList[indexPath.row]
@@ -36,7 +38,7 @@ class ListViewController : UITableViewController {
             
             let addItemController = segue.sourceViewController as ViewController
             if let newItem = addItemController.itemName {
-                itemsList += [newItem]
+                itemsList += [ScavengerHuntItem(name: newItem)]
                 let indexPath =  NSIndexPath(forRow: itemsList.count - 1, inSection: 0)
                 tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             }

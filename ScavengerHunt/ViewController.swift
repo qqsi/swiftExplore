@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
     
-    var itemName: String?
+    var createdItem: ScavengerHuntItem?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
         if segue.identifier == "DoneItem" {
             if let name = textField.text {
                 if !name.isEmpty {
-                    itemName = name
+                     createdItem = ScavengerHuntItem(name: name)
                 }
             }
         }
